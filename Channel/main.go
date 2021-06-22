@@ -17,7 +17,7 @@ func main() {
 		"https://graph.microsoft.com",
 	}
 
-	ch:=make(chan string)
+	ch:=make(chan string,10)
 
 	for _, api := range apis {
 		go checkApi(api,ch)
